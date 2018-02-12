@@ -163,6 +163,10 @@
     <Compile Include="Migrations\201802121405335_TimeIn.Designer.cs">
       <DependentUpon>201802121405335_TimeIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802121518512_Input2.cs" />
+    <Compile Include="Migrations\201802121518512_Input2.Designer.cs">
+      <DependentUpon>201802121518512_Input2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -232,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802121405335_TimeIn.resx">
       <DependentUpon>201802121405335_TimeIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802121518512_Input2.resx">
+      <DependentUpon>201802121518512_Input2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
