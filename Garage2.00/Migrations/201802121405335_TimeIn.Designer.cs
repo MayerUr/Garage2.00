@@ -7,13 +7,13 @@ namespace Garage2._00.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class EndastTimestampIn : IMigrationMetadata
+    public sealed partial class TimeIn : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(EndastTimestampIn));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(TimeIn));
         
         string IMigrationMetadata.Id
         {
-            get { return "201802121310155_EndastTimestampIn"; }
+            get { return "201802121405335_TimeIn"; }
         }
         
         string IMigrationMetadata.Source
