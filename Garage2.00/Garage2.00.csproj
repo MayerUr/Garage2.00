@@ -159,9 +159,9 @@
     <Compile Include="Migrations\201802121015196_SeedCars.Designer.cs">
       <DependentUpon>201802121015196_SeedCars.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802121310155_EndastTimestampIn.cs" />
-    <Compile Include="Migrations\201802121310155_EndastTimestampIn.Designer.cs">
-      <DependentUpon>201802121310155_EndastTimestampIn.cs</DependentUpon>
+    <Compile Include="Migrations\201802121405335_TimeIn.cs" />
+    <Compile Include="Migrations\201802121405335_TimeIn.Designer.cs">
+      <DependentUpon>201802121405335_TimeIn.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Vehicle.cs" />
@@ -230,8 +230,8 @@
     <EmbeddedResource Include="Migrations\201802121015196_SeedCars.resx">
       <DependentUpon>201802121015196_SeedCars.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802121310155_EndastTimestampIn.resx">
-      <DependentUpon>201802121310155_EndastTimestampIn.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802121405335_TimeIn.resx">
+      <DependentUpon>201802121405335_TimeIn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
