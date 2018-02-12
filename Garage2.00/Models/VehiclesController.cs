@@ -7,9 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Garage2._00.DataAccessLayer;
-using Garage2._00.Models;
 
-namespace Garage2._00.Controllers
+namespace Garage2._00.Models
 {
     public class VehiclesController : Controller
     {
@@ -47,11 +46,10 @@ namespace Garage2._00.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,VehicleType,RegistrationNumber,Color,Brand,Model,NoOfWheels")] Vehicle vehicle)
+        public ActionResult Create([Bind(Include = "Id,VehicleType,RegistrationNumber,Color,Brand,Model,NoOfWheels,TimestampIn,TimestampOut")] Vehicle vehicle)
         {
             if (ModelState.IsValid)
             {
-                vehicle.TimestampIn = DateTime.Now;
                 db.Vehicles.Add(vehicle);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -80,7 +78,7 @@ namespace Garage2._00.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,VehicleType,RegistrationNumber,Color,Brand,Model,NoOfWheels")] Vehicle vehicle)
+        public ActionResult Edit([Bind(Include = "Id,VehicleType,RegistrationNumber,Color,Brand,Model,NoOfWheels,TimestampIn,TimestampOut")] Vehicle vehicle)
         {
             if (ModelState.IsValid)
             {

@@ -22,9 +22,9 @@ namespace Garage2._00.Migrations
 
             context.Vehicles.AddOrUpdate(
                 unique => unique.RegistrationNumber,
-                new Models.Vehicle { VehicleType = VehicleTypes.Car, RegistrationNumber = "KNN903", Brand = "Volvo", Model = "245", Color = "Vinröd", NoOfWheels = 4 },
-                new Models.Vehicle { VehicleType = VehicleTypes.Car, RegistrationNumber = "CRL440", Brand = "Rover", Model = "400", Color = "Metallröd", NoOfWheels = 4 },
-                new Models.Vehicle { VehicleType = VehicleTypes.Car, RegistrationNumber = "SFC253", Brand = "Rover", Model = "75", Color = "Silver", NoOfWheels = 4 }
+                new Models.Vehicle { VehicleType = VehicleTypes.Car, RegistrationNumber = "KNN903", Brand = "Volvo", Model = "245", Color = "Vinröd", NoOfWheels = 4   , TimestampIn=DateTime.Now},
+                new Models.Vehicle { VehicleType = VehicleTypes.Car, RegistrationNumber = "CRL440", Brand = "Rover", Model = "400", Color = "Metallröd", NoOfWheels = 4, TimestampIn=DateTime.Now},
+                new Models.Vehicle { VehicleType = VehicleTypes.Car, RegistrationNumber = "SFC253", Brand = "Rover", Model = "75", Color = "Silver", NoOfWheels = 4    , TimestampIn=DateTime.Now }
                 );
         }
     }

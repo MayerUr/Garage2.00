@@ -14,5 +14,6 @@ namespace Garage2._00.Models
         public string Brand { get; set; }
         public string Model { get; set; }
         public int NoOfWheels { get; set; }
+        public DateTime TimestampIn { get; set; }
     }
 }
