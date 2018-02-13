@@ -2,7 +2,15 @@
 
 @{
     ViewBag.Title = "Delete";
-}
+
+//  Kvittohanteringens run-time variabler tilldelas var sitt värde
+
+    ViewBag.TimestampOut = DateTime.Now;
+    ViewBag.TotalTime = ViewBag.TimestampOut - Model.TimestampIn;
+    ViewBag.TotalHours = ViewBag.TotalTime.Ticks /1E+7 /3600;
+    ViewBag.HourPrice = 100.0;
+    ViewBag.TotalPrice = ViewBag.TotalHours * ViewBag.HourPrice;
+    }
 
 <h2>Check-Out</h2>
 
@@ -59,14 +67,49 @@
             @Html.DisplayFor(model => model.NoOfWheels)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.TimestampIn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimestampIn)
+        </dd>
+
+        <!-- Kvittohanteringens run-time variabler visas -->
+        <dt>
+            @Html.DisplayName("Timestamp Out")
+        </dt>
+
+        <dd>
+            @ViewBag.TimestampOut
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Total time")
+        </dt>
+
+        <dd>
+            @ViewBag.TotalTime.ToString(@"hh\:mm\:ss")
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Price")
+        </dt>
+
+        <dd>
+            @ViewBag.TotalPrice.ToString("0,0.00 kr")
+        </dd>
+
     </dl>
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Check-Out" class="btn btn-default" /> |
+            <input type="submit" value="Check-Out WITH Receipt" class="btn btn-success" /> |
+            <input type="submit" value="Check-Out, NO Receipt!" class="btn btn-danger" /> |
             @Html.ActionLink("Back to List", "Index")
         </div>
+
     }
 </div>
