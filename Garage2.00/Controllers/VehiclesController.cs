@@ -21,6 +21,22 @@ namespace Garage2._00.Controllers
             return View(db.Vehicles.ToList());
         }
 
+        // GET: Vehicle/RegistrationNumber
+        public ActionResult RegistrationSearch(string searchString)
+        {
+            var vehicle = from s in db.Vehicles
+                           select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                vehicle = vehicle.Where(s => s.RegistrationNumber.Contains(searchString));
+            }
+            if (vehicle == null)
+            {
+                return HttpNotFound();
+            }
+            return View(vehicle);
+        }
+
         // GET: Vehicles/Details/5
         public ActionResult Details(int? id)
         {
@@ -56,7 +72,6 @@ namespace Garage2._00.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
             return View(vehicle);
         }
 
@@ -80,10 +95,11 @@ namespace Garage2._00.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,VehicleType,RegistrationNumber,Color,Brand,Model,NoOfWheels")] Vehicle vehicle)
+        public ActionResult Edit([Bind(Include = "Id,VehicleType,RegistrationNumber,Color,Brand,Model,NoOfWheels, TimestampIn")] Vehicle vehicle)
         {
             if (ModelState.IsValid)
             {
+                //vehicle.TimestampIn = DateTime.Now;
                 db.Entry(vehicle).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

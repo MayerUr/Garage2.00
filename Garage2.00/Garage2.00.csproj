@@ -167,6 +167,10 @@
     <Compile Include="Migrations\201802121518512_Input2.Designer.cs">
       <DependentUpon>201802121518512_Input2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802131346334_Search.cs" />
+    <Compile Include="Migrations\201802131346334_Search.Designer.cs">
+      <DependentUpon>201802131346334_Search.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -213,6 +217,7 @@
     <Content Include="Views\Vehicles\Details.cshtml" />
     <Content Include="Views\Vehicles\Edit.cshtml" />
     <Content Include="Views\Vehicles\Index.cshtml" />
+    <Content Include="Views\Vehicles\RegistrationSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -239,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802121518512_Input2.resx">
       <DependentUpon>201802121518512_Input2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802131346334_Search.resx">
+      <DependentUpon>201802131346334_Search.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
