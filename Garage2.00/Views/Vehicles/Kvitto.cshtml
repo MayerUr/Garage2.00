@@ -16,28 +16,15 @@
 
 <h3>Are you sure you want to Check-Out this vehicle WITH receipt?</h3>
 <div>
-    <h4>Vehicle</h4>
+    <h1>
+        @Html.DisplayFor(model => model.VehicleType)
+    </h1>
+    <h3>
+        @Html.DisplayFor(model => model.RegistrationNumber)
+    </h3>
     <hr />
+
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.VehicleType)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.VehicleType)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.RegistrationNumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.RegistrationNumber)
-        </dd>
-
-        <dd>
-            -------------------------------------------------------
-        </dd>
 
         <dt>
             @Html.DisplayNameFor(model => model.TimestampIn)
