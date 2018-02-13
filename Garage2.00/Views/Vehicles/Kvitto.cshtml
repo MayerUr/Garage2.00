@@ -1,0 +1,84 @@
+﻿@model Garage2._00.Models.Vehicle
+
+@{
+    ViewBag.Title = "Kvitto";
+
+//  Kvittohanteringens run-time variabler tilldelas var sitt värde
+
+    ViewBag.TimestampOut = DateTime.Now;
+    ViewBag.TotalTime = ViewBag.TimestampOut - Model.TimestampIn;
+    ViewBag.TotalHours = ViewBag.TotalTime.Ticks / 1E+7 / 3600;
+    ViewBag.HourPrice = 100.0;
+    ViewBag.TotalPrice = ViewBag.TotalHours * ViewBag.HourPrice;
+    }
+
+<h2>Kvitto</h2>
+
+<h3>Are you sure you want to Check-Out this vehicle WITH receipt?</h3>
+<div>
+    <h4>Vehicle</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VehicleType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VehicleType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RegistrationNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegistrationNumber)
+        </dd>
+
+        <dd>
+            -------------------------------------------------------
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimestampIn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimestampIn)
+        </dd>
+
+        <!-- Kvittohanteringens run-time variabler visas -->
+        <dt>
+            @Html.DisplayName("Timestamp Out")
+        </dt>
+
+        <dd>
+            @ViewBag.TimestampOut
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Total time")
+        </dt>
+
+        <dd>
+            @ViewBag.TotalTime.ToString(@"hh\:mm\:ss")
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Price")
+        </dt>
+
+        <dd>
+            @ViewBag.TotalPrice.ToString("0,0.00 kr")
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Check-Out WITH receipt" class="btn btn-success" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

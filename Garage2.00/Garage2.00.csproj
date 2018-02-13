@@ -163,6 +163,14 @@
     <Compile Include="Migrations\201802121405335_TimeIn.Designer.cs">
       <DependentUpon>201802121405335_TimeIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802131447078_DoIt.cs" />
+    <Compile Include="Migrations\201802131447078_DoIt.Designer.cs">
+      <DependentUpon>201802131447078_DoIt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802131518254_NoKvittoDB.cs" />
+    <Compile Include="Migrations\201802131518254_NoKvittoDB.Designer.cs">
+      <DependentUpon>201802131518254_NoKvittoDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -209,6 +217,7 @@
     <Content Include="Views\Vehicles\Details.cshtml" />
     <Content Include="Views\Vehicles\Edit.cshtml" />
     <Content Include="Views\Vehicles\Index.cshtml" />
+    <Content Include="Views\Vehicles\Kvitto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -232,6 +241,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802121405335_TimeIn.resx">
       <DependentUpon>201802121405335_TimeIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802131447078_DoIt.resx">
+      <DependentUpon>201802131447078_DoIt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802131518254_NoKvittoDB.resx">
+      <DependentUpon>201802131518254_NoKvittoDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

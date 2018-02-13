@@ -112,7 +112,34 @@ namespace Garage2._00.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Vehicle vehicle = db.Vehicles.Find(id);
-            
+
+            db.Vehicles.Remove(vehicle);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        // GET: Vehicles/Kvitto/5
+        public ActionResult Kvitto(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Vehicle vehicle = db.Vehicles.Find(id);
+            if (vehicle == null)
+            {
+                return HttpNotFound();
+            }
+            return View(vehicle);
+        }
+
+        // POST: Vehicles/Kvitto/5
+        [HttpPost, ActionName("Kvitto")]
+        [ValidateAntiForgeryToken]
+        public ActionResult KvittoConfirmed(int id)
+        {
+            Vehicle vehicle = db.Vehicles.Find(id);
+
             db.Vehicles.Remove(vehicle);
             db.SaveChanges();
             return RedirectToAction("Index");

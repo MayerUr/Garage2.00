@@ -14,5 +14,7 @@ namespace Garage2._00.DataAccessLayer
         }
 
         public DbSet<Models.Vehicle> Vehicles { get; set; }
+
+        // public System.Data.Entity.DbSet<Garage2._00.Models.Kvitto> Kvittoes { get; set; }
     }
 }
