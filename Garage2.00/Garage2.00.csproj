@@ -207,6 +207,10 @@
     <Compile Include="Migrations\201802141004272_Search12.Designer.cs">
       <DependentUpon>201802141004272_Search12.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802141052285_Nisse.cs" />
+    <Compile Include="Migrations\201802141052285_Nisse.Designer.cs">
+      <DependentUpon>201802141052285_Nisse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -253,7 +257,6 @@
     <Content Include="Views\Vehicles\Details.cshtml" />
     <Content Include="Views\Vehicles\Edit.cshtml" />
     <Content Include="Views\Vehicles\Index.cshtml" />
-    <Content Include="Views\Vehicles\RegistrationNumberSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -310,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802141004272_Search12.resx">
       <DependentUpon>201802141004272_Search12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802141052285_Nisse.resx">
+      <DependentUpon>201802141052285_Nisse.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -16,25 +16,14 @@ namespace Garage2._00.Controllers
         private RegisterContext db = new RegisterContext();
 
         // GET: Vehicles
-        public ActionResult Index()
-        {
-            return View(db.Vehicles.ToList());
-        }
-
-        // GET: Vehicle/RegistrationNumber
-       
-        public ActionResult RegistrationNumberSearch(string searchString)
+        public ActionResult Index(string searchString)
         {
             var vehicle = from m in db.Vehicles
-                         select m;
+                          select m;
 
             if (!String.IsNullOrEmpty(searchString))
             {
                 vehicle = vehicle.Where(s => s.RegistrationNumber.Contains(searchString));
-            }
-            else
-            {
-                return HttpNotFound();
             }
             return View(vehicle);
         }
