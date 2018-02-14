@@ -171,6 +171,22 @@
     <Compile Include="Migrations\201802131346334_Search.Designer.cs">
       <DependentUpon>201802131346334_Search.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802131411253_Search2.cs" />
+    <Compile Include="Migrations\201802131411253_Search2.Designer.cs">
+      <DependentUpon>201802131411253_Search2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802131541484_Search3.cs" />
+    <Compile Include="Migrations\201802131541484_Search3.Designer.cs">
+      <DependentUpon>201802131541484_Search3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802140823493_Search4.cs" />
+    <Compile Include="Migrations\201802140823493_Search4.Designer.cs">
+      <DependentUpon>201802140823493_Search4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802140837183_Search6.cs" />
+    <Compile Include="Migrations\201802140837183_Search6.Designer.cs">
+      <DependentUpon>201802140837183_Search6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -218,6 +234,7 @@
     <Content Include="Views\Vehicles\Edit.cshtml" />
     <Content Include="Views\Vehicles\Index.cshtml" />
     <Content Include="Views\Vehicles\RegistrationSearch.cshtml" />
+    <Content Include="Views\Vehicles\RegistrationNumberSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -247,6 +264,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802131346334_Search.resx">
       <DependentUpon>201802131346334_Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802131411253_Search2.resx">
+      <DependentUpon>201802131411253_Search2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802131541484_Search3.resx">
+      <DependentUpon>201802131541484_Search3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802140823493_Search4.resx">
+      <DependentUpon>201802140823493_Search4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802140837183_Search6.resx">
+      <DependentUpon>201802140837183_Search6.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

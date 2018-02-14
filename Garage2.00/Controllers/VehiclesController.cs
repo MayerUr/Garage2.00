@@ -22,18 +22,31 @@ namespace Garage2._00.Controllers
         }
 
         // GET: Vehicle/RegistrationNumber
-        public ActionResult RegistrationSearch(string searchString)
+        //public ActionResult RegistrationSearch(string searchString)
+        //{
+        //    //if (!String.IsNullOrEmpty(searchString))
+        //    //{
+        //    //    //RegistrationNumber = RegistrationNumber.Where(s => s.db.Vehicles.Contains(searchString));
+        //    //}
+
+        //    Vehicle vehicle = db.Vehicles.Find("RegistrationNumber", "searchString");
+        //    if (vehicle == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(vehicle);
+        //}
+
+        public ActionResult RegistrationNumberSearch(string searchString)
         {
-            var vehicle = from s in db.Vehicles
-                           select s;
+            var vehicle = from m in db.Vehicles
+                         select m;
+
             if (!String.IsNullOrEmpty(searchString))
             {
                 vehicle = vehicle.Where(s => s.RegistrationNumber.Contains(searchString));
             }
-            if (vehicle == null)
-            {
-                return HttpNotFound();
-            }
+
             return View(vehicle);
         }
 
