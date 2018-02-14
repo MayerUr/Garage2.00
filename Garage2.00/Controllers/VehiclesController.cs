@@ -22,21 +22,7 @@ namespace Garage2._00.Controllers
         }
 
         // GET: Vehicle/RegistrationNumber
-        //public ActionResult RegistrationSearch(string searchString)
-        //{
-        //    //if (!String.IsNullOrEmpty(searchString))
-        //    //{
-        //    //    //RegistrationNumber = RegistrationNumber.Where(s => s.db.Vehicles.Contains(searchString));
-        //    //}
-
-        //    Vehicle vehicle = db.Vehicles.Find("RegistrationNumber", "searchString");
-        //    if (vehicle == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    return View(vehicle);
-        //}
-
+       
         public ActionResult RegistrationNumberSearch(string searchString)
         {
             var vehicle = from m in db.Vehicles
@@ -46,7 +32,10 @@ namespace Garage2._00.Controllers
             {
                 vehicle = vehicle.Where(s => s.RegistrationNumber.Contains(searchString));
             }
-
+            else
+            {
+                return HttpNotFound();
+            }
             return View(vehicle);
         }
 

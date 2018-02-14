@@ -10,14 +10,6 @@
     @Html.ActionLink("Check-In", "Create")
 </p>
 
-@using (Html.BeginForm())
-{
-    <p>
-       Find vehicle by registration number: @Html.TextBox("SearchString")
-       @Html.ActionLink("Search", "RegistrationSearch")
-    </p>
-}
-
 <table class="table">
     <tr>
         <th>
