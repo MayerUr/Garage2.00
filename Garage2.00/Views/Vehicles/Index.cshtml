@@ -4,11 +4,20 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Garage Manager</h2>
 
 <p>
     @Html.ActionLink("Check-In", "Create")
 </p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Title: @Html.TextBox("SearchString") <br />
+        <input type="submit" value="Search" />
+    </p>
+}
+
 <table class="table">
     <tr>
         <th>
@@ -67,3 +76,7 @@
 }
 
 </table>
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

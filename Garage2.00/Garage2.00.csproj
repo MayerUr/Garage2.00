@@ -163,13 +163,53 @@
     <Compile Include="Migrations\201802121405335_TimeIn.Designer.cs">
       <DependentUpon>201802121405335_TimeIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802131447078_DoIt.cs" />
-    <Compile Include="Migrations\201802131447078_DoIt.Designer.cs">
-      <DependentUpon>201802131447078_DoIt.cs</DependentUpon>
+    <Compile Include="Migrations\201802121518512_Input2.cs" />
+    <Compile Include="Migrations\201802121518512_Input2.Designer.cs">
+      <DependentUpon>201802121518512_Input2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802131518254_NoKvittoDB.cs" />
-    <Compile Include="Migrations\201802131518254_NoKvittoDB.Designer.cs">
-      <DependentUpon>201802131518254_NoKvittoDB.cs</DependentUpon>
+    <Compile Include="Migrations\201802131346334_Search.cs" />
+    <Compile Include="Migrations\201802131346334_Search.Designer.cs">
+      <DependentUpon>201802131346334_Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802131411253_Search2.cs" />
+    <Compile Include="Migrations\201802131411253_Search2.Designer.cs">
+      <DependentUpon>201802131411253_Search2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802131541484_Search3.cs" />
+    <Compile Include="Migrations\201802131541484_Search3.Designer.cs">
+      <DependentUpon>201802131541484_Search3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802140823493_Search4.cs" />
+    <Compile Include="Migrations\201802140823493_Search4.Designer.cs">
+      <DependentUpon>201802140823493_Search4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802140837183_Search6.cs" />
+    <Compile Include="Migrations\201802140837183_Search6.Designer.cs">
+      <DependentUpon>201802140837183_Search6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802140855462_Search7.cs" />
+    <Compile Include="Migrations\201802140855462_Search7.Designer.cs">
+      <DependentUpon>201802140855462_Search7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802140910134_Search8.cs" />
+    <Compile Include="Migrations\201802140910134_Search8.Designer.cs">
+      <DependentUpon>201802140910134_Search8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802140917095_Search10.cs" />
+    <Compile Include="Migrations\201802140917095_Search10.Designer.cs">
+      <DependentUpon>201802140917095_Search10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802140930385_Search11.cs" />
+    <Compile Include="Migrations\201802140930385_Search11.Designer.cs">
+      <DependentUpon>201802140930385_Search11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802141004272_Search12.cs" />
+    <Compile Include="Migrations\201802141004272_Search12.Designer.cs">
+      <DependentUpon>201802141004272_Search12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802141052285_Nisse.cs" />
+    <Compile Include="Migrations\201802141052285_Nisse.Designer.cs">
+      <DependentUpon>201802141052285_Nisse.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Vehicle.cs" />
@@ -217,7 +257,6 @@
     <Content Include="Views\Vehicles\Details.cshtml" />
     <Content Include="Views\Vehicles\Edit.cshtml" />
     <Content Include="Views\Vehicles\Index.cshtml" />
-    <Content Include="Views\Vehicles\Kvitto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -242,11 +281,41 @@
     <EmbeddedResource Include="Migrations\201802121405335_TimeIn.resx">
       <DependentUpon>201802121405335_TimeIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802131447078_DoIt.resx">
-      <DependentUpon>201802131447078_DoIt.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802121518512_Input2.resx">
+      <DependentUpon>201802121518512_Input2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802131518254_NoKvittoDB.resx">
-      <DependentUpon>201802131518254_NoKvittoDB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802131346334_Search.resx">
+      <DependentUpon>201802131346334_Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802131411253_Search2.resx">
+      <DependentUpon>201802131411253_Search2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802131541484_Search3.resx">
+      <DependentUpon>201802131541484_Search3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802140823493_Search4.resx">
+      <DependentUpon>201802140823493_Search4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802140837183_Search6.resx">
+      <DependentUpon>201802140837183_Search6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802140855462_Search7.resx">
+      <DependentUpon>201802140855462_Search7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802140910134_Search8.resx">
+      <DependentUpon>201802140910134_Search8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802140917095_Search10.resx">
+      <DependentUpon>201802140917095_Search10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802140930385_Search11.resx">
+      <DependentUpon>201802140930385_Search11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802141004272_Search12.resx">
+      <DependentUpon>201802141004272_Search12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802141052285_Nisse.resx">
+      <DependentUpon>201802141052285_Nisse.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
